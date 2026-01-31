@@ -56,10 +56,10 @@ foreach (var appender in logRepository.GetAppenders())
     }
 } // set connection string for log4net
 
-builder.Services.AddDbContext<ApiTemplateContext>(
+builder.Services.AddDbContext<FintechContext>(
     option => option.UseSqlServer(connectionStrings),
     ServiceLifetime.Scoped);
-builder.Services.AddTransient<DbContext, ApiTemplateContext>();
+builder.Services.AddTransient<DbContext, FintechContext>();
 builder.Services.RegisterInfrastructureServices(builder.Configuration);
 builder.Services.ValidatorsServiceRegistration();
 //builder.Services.AddCors(o => o.AddPolicy("MyCors", build =>
@@ -165,7 +165,7 @@ builder.Services.Configure<FormOptions>(options =>
 });
 
 // registration email with Graph API
-builder.Services.AddGraphApiEmail(builder.Configuration);
+//builder.Services.AddGraphApiEmail(builder.Configuration);
 
 var app = builder.Build();
 

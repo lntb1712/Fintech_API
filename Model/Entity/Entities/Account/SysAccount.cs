@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Entity.Entities.Account
 {
-    [Table("Template_Sys_Account")]
+    [Table("Fintech_Sys_Account")]
     public class SysAccount : BaseEntity
     {
         public Guid Id { get; set; }

@@ -2,7 +2,7 @@
 
 namespace Entity.Entities;
 
-[Table("Template_Sys_AppVersion")]
+[Table("Fintech_Sys_AppVersion")]
 public class SysAppVersion
 {
     public Guid Id { get; set; }

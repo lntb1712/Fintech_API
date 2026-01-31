@@ -2,7 +2,7 @@
 
 namespace Entity.Entities;
 
-[Table("Template_Sys_UserDevice")]
+[Table("Fintech_Sys_UserDevice")]
 public class SysUserDevice : BaseEntity
 {
     public Guid Id { get; set; }

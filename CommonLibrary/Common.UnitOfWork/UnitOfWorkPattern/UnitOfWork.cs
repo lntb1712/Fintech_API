@@ -18,7 +18,7 @@ public class UnitOfWork : IUnitOfWork
     private bool disposed = false;
     private string? _connectionString = "";
 
-    public UnitOfWork(ApiTemplateContext dbContext)
+    public UnitOfWork(FintechContext dbContext)
     {
         this._context = dbContext;
         repositories = new Dictionary<Type, object>();

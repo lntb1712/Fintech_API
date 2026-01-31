@@ -11,9 +11,9 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Entity.Migrations
 {
-    [DbContext(typeof(ApiTemplateContext))]
-    [Migration("20251110125817_Init_Project_10112025")]
-    partial class Init_Project_10112025
+    [DbContext(typeof(FintechContext))]
+    [Migration("20260131102341_InitDatabase")]
+    partial class InitDatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -98,7 +98,7 @@ namespace Entity.Migrations
                     b.HasIndex("Code", "UserName")
                         .IsUnique();
 
-                    b.ToTable("Template_Sys_Account");
+                    b.ToTable("Fintech_Sys_Account");
                 });
 
             modelBuilder.Entity("Entity.Entities.Account.SysDevice", b =>
@@ -180,7 +180,7 @@ namespace Entity.Migrations
                     b.HasIndex("UserId", "UDID")
                         .IsUnique();
 
-                    b.ToTable("Template_Sys_Device");
+                    b.ToTable("Fintech_Sys_Device");
                 });
 
             modelBuilder.Entity("Entity.Entities.PermissionManagement.SysActivity", b =>
@@ -228,7 +228,7 @@ namespace Entity.Migrations
 
                     b.HasIndex("CreatedDate");
 
-                    b.ToTable("Template_Sys_Activity");
+                    b.ToTable("Fintech_Sys_Activity");
                 });
 
             modelBuilder.Entity("Entity.Entities.PermissionManagement.SysRole", b =>
@@ -272,7 +272,7 @@ namespace Entity.Migrations
 
                     b.HasIndex("CreatedDate");
 
-                    b.ToTable("Template_Sys_SysRole");
+                    b.ToTable("Fintech_Sys_SysRole");
                 });
 
             modelBuilder.Entity("Entity.Entities.PermissionManagement.SysRoleActivity", b =>
@@ -327,7 +327,7 @@ namespace Entity.Migrations
 
                     b.HasIndex("CreatedDate");
 
-                    b.ToTable("Template_Sys_Role_Activity");
+                    b.ToTable("Fintech_Sys_Role_Activity");
                 });
 
             modelBuilder.Entity("Entity.Entities.PermissionManagement.SysUserActivity", b =>
@@ -382,7 +382,7 @@ namespace Entity.Migrations
 
                     b.HasIndex("CreatedDate");
 
-                    b.ToTable("Template_Sys_User_Activity");
+                    b.ToTable("Fintech_Sys_User_Activity");
                 });
 
             modelBuilder.Entity("Entity.Entities.PermissionManagement.SysUserRole", b =>
@@ -425,7 +425,7 @@ namespace Entity.Migrations
 
                     b.HasIndex("CreatedDate");
 
-                    b.ToTable("Template_Sys_UserRole");
+                    b.ToTable("Fintech_Sys_UserRole");
                 });
 
             modelBuilder.Entity("Entity.Entities.SysAppVersion", b =>
@@ -471,7 +471,7 @@ namespace Entity.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Template_Sys_AppVersion");
+                    b.ToTable("Fintech_Sys_AppVersion");
                 });
 
             modelBuilder.Entity("Entity.Entities.SysMailTemplate", b =>
@@ -518,7 +518,7 @@ namespace Entity.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Template_Sys_MailTemplate");
+                    b.ToTable("Fintech_Sys_MailTemplate");
                 });
 
             modelBuilder.Entity("Entity.Entities.SysNotification", b =>
@@ -577,7 +577,7 @@ namespace Entity.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Template_Sys_Notification");
+                    b.ToTable("Fintech_Sys_Notification");
                 });
 
             modelBuilder.Entity("Entity.Entities.SysUserDevice", b =>
@@ -687,7 +687,7 @@ namespace Entity.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Template_Sys_UserDevice");
+                    b.ToTable("Fintech_Sys_UserDevice");
                 });
 
             modelBuilder.Entity("Entity.Log", b =>
@@ -723,7 +723,7 @@ namespace Entity.Migrations
 
                     b.HasIndex("CreatedDate");
 
-                    b.ToTable("Template_Log");
+                    b.ToTable("Fintech_Log");
                 });
 #pragma warning restore 612, 618
         }

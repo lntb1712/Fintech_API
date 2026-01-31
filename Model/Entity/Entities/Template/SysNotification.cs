@@ -2,7 +2,7 @@
 
 namespace Entity.Entities;
 
-[Table("Template_Sys_Notification")]
+[Table("Fintech_Sys_Notification")]
 public class SysNotification : BaseEntity
 {
     public Guid Id { get; set; }

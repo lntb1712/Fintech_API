@@ -2,7 +2,7 @@
 
 namespace Entity.Entities;
 
-[Table("Template_Sys_MailTemplate")]
+[Table("Fintech_Sys_MailTemplate")]
 public class SysMailTemplate : BaseEntity
 {
     public Guid Id { get; set; }

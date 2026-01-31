@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Entity.Entities.PermissionManagement;
 
-[Table("Template_Sys_User_Activity")]
+[Table("Fintech_Sys_User_Activity")]
 public class SysUserActivity : BaseEntity
 {
     public Guid Id { get; set; }

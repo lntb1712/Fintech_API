@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Entity.Entities.Account
 {
-    [Table("Template_Sys_Device")]
+    [Table("Fintech_Sys_Device")]
     public class SysDevice : BaseEntity
     {
         public Guid Id { get; set; }

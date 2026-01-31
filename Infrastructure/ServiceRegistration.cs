@@ -40,7 +40,7 @@ public static class ServiceRegistration
         services.AddTransient<IFileService, FileService>();
         services.AddTransient<IAuthService, AuthService>();
         services.AddTransient<IUserService, UserService>();
-        services.AddTransient<IEmailService, EmailService>();
+        //services.AddTransient<IEmailService, EmailService>();
         services.AddTransient<IDeviceService, DeviceService>();
 
         return services;

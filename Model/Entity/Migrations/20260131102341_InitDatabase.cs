@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Entity.Migrations
 {
     /// <inheritdoc />
-    public partial class Init_Project_10112025 : Migration
+    public partial class InitDatabase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Template_Log",
+                name: "Fintech_Log",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -26,11 +26,11 @@ namespace Entity.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Template_Log", x => x.Id);
+                    table.PrimaryKey("PK_Fintech_Log", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Template_Sys_Account",
+                name: "Fintech_Sys_Account",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -56,11 +56,11 @@ namespace Entity.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Template_Sys_Account", x => x.Id);
+                    table.PrimaryKey("PK_Fintech_Sys_Account", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Template_Sys_Activity",
+                name: "Fintech_Sys_Activity",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -78,11 +78,11 @@ namespace Entity.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Template_Sys_Activity", x => x.Id);
+                    table.PrimaryKey("PK_Fintech_Sys_Activity", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Template_Sys_AppVersion",
+                name: "Fintech_Sys_AppVersion",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -100,11 +100,11 @@ namespace Entity.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Template_Sys_AppVersion", x => x.Id);
+                    table.PrimaryKey("PK_Fintech_Sys_AppVersion", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Template_Sys_Device",
+                name: "Fintech_Sys_Device",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -132,11 +132,11 @@ namespace Entity.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Template_Sys_Device", x => x.Id);
+                    table.PrimaryKey("PK_Fintech_Sys_Device", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Template_Sys_MailTemplate",
+                name: "Fintech_Sys_MailTemplate",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -154,11 +154,11 @@ namespace Entity.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Template_Sys_MailTemplate", x => x.Id);
+                    table.PrimaryKey("PK_Fintech_Sys_MailTemplate", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Template_Sys_Notification",
+                name: "Fintech_Sys_Notification",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -181,11 +181,11 @@ namespace Entity.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Template_Sys_Notification", x => x.Id);
+                    table.PrimaryKey("PK_Fintech_Sys_Notification", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Template_Sys_Role_Activity",
+                name: "Fintech_Sys_Role_Activity",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -206,11 +206,11 @@ namespace Entity.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Template_Sys_Role_Activity", x => x.Id);
+                    table.PrimaryKey("PK_Fintech_Sys_Role_Activity", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Template_Sys_SysRole",
+                name: "Fintech_Sys_SysRole",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -227,11 +227,11 @@ namespace Entity.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Template_Sys_SysRole", x => x.Id);
+                    table.PrimaryKey("PK_Fintech_Sys_SysRole", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Template_Sys_User_Activity",
+                name: "Fintech_Sys_User_Activity",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -252,11 +252,11 @@ namespace Entity.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Template_Sys_User_Activity", x => x.Id);
+                    table.PrimaryKey("PK_Fintech_Sys_User_Activity", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Template_Sys_UserDevice",
+                name: "Fintech_Sys_UserDevice",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -295,11 +295,11 @@ namespace Entity.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Template_Sys_UserDevice", x => x.Id);
+                    table.PrimaryKey("PK_Fintech_Sys_UserDevice", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Template_Sys_UserRole",
+                name: "Fintech_Sys_UserRole",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -316,59 +316,59 @@ namespace Entity.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Template_Sys_UserRole", x => x.Id);
+                    table.PrimaryKey("PK_Fintech_Sys_UserRole", x => x.Id);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Template_Log_CreatedDate",
-                table: "Template_Log",
+                name: "IX_Fintech_Log_CreatedDate",
+                table: "Fintech_Log",
                 column: "CreatedDate");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Template_Sys_Account_Code_UserName",
-                table: "Template_Sys_Account",
+                name: "IX_Fintech_Sys_Account_Code_UserName",
+                table: "Fintech_Sys_Account",
                 columns: new[] { "Code", "UserName" },
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Template_Sys_Account_CreatedDate",
-                table: "Template_Sys_Account",
+                name: "IX_Fintech_Sys_Account_CreatedDate",
+                table: "Fintech_Sys_Account",
                 column: "CreatedDate");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Template_Sys_Activity_CreatedDate",
-                table: "Template_Sys_Activity",
+                name: "IX_Fintech_Sys_Activity_CreatedDate",
+                table: "Fintech_Sys_Activity",
                 column: "CreatedDate");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Template_Sys_Device_CreatedDate",
-                table: "Template_Sys_Device",
+                name: "IX_Fintech_Sys_Device_CreatedDate",
+                table: "Fintech_Sys_Device",
                 column: "CreatedDate");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Template_Sys_Device_UserId_UDID",
-                table: "Template_Sys_Device",
+                name: "IX_Fintech_Sys_Device_UserId_UDID",
+                table: "Fintech_Sys_Device",
                 columns: new[] { "UserId", "UDID" },
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Template_Sys_Role_Activity_CreatedDate",
-                table: "Template_Sys_Role_Activity",
+                name: "IX_Fintech_Sys_Role_Activity_CreatedDate",
+                table: "Fintech_Sys_Role_Activity",
                 column: "CreatedDate");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Template_Sys_SysRole_CreatedDate",
-                table: "Template_Sys_SysRole",
+                name: "IX_Fintech_Sys_SysRole_CreatedDate",
+                table: "Fintech_Sys_SysRole",
                 column: "CreatedDate");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Template_Sys_User_Activity_CreatedDate",
-                table: "Template_Sys_User_Activity",
+                name: "IX_Fintech_Sys_User_Activity_CreatedDate",
+                table: "Fintech_Sys_User_Activity",
                 column: "CreatedDate");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Template_Sys_UserRole_CreatedDate",
-                table: "Template_Sys_UserRole",
+                name: "IX_Fintech_Sys_UserRole_CreatedDate",
+                table: "Fintech_Sys_UserRole",
                 column: "CreatedDate");
         }
 
@@ -376,40 +376,40 @@ namespace Entity.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Template_Log");
+                name: "Fintech_Log");
 
             migrationBuilder.DropTable(
-                name: "Template_Sys_Account");
+                name: "Fintech_Sys_Account");
 
             migrationBuilder.DropTable(
-                name: "Template_Sys_Activity");
+                name: "Fintech_Sys_Activity");
 
             migrationBuilder.DropTable(
-                name: "Template_Sys_AppVersion");
+                name: "Fintech_Sys_AppVersion");
 
             migrationBuilder.DropTable(
-                name: "Template_Sys_Device");
+                name: "Fintech_Sys_Device");
 
             migrationBuilder.DropTable(
-                name: "Template_Sys_MailTemplate");
+                name: "Fintech_Sys_MailTemplate");
 
             migrationBuilder.DropTable(
-                name: "Template_Sys_Notification");
+                name: "Fintech_Sys_Notification");
 
             migrationBuilder.DropTable(
-                name: "Template_Sys_Role_Activity");
+                name: "Fintech_Sys_Role_Activity");
 
             migrationBuilder.DropTable(
-                name: "Template_Sys_SysRole");
+                name: "Fintech_Sys_SysRole");
 
             migrationBuilder.DropTable(
-                name: "Template_Sys_User_Activity");
+                name: "Fintech_Sys_User_Activity");
 
             migrationBuilder.DropTable(
-                name: "Template_Sys_UserDevice");
+                name: "Fintech_Sys_UserDevice");
 
             migrationBuilder.DropTable(
-                name: "Template_Sys_UserRole");
+                name: "Fintech_Sys_UserRole");
         }
     }
 }

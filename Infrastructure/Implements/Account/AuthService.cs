@@ -791,7 +791,7 @@ namespace Infrastructure.Implements.Account
         public async Task<bool> VerifyPermissionOfUser(Guid currentUserId, string code, string crud)
         {
 
-            var results = _unitOfWork.ExecuteStoreProcedure<PermissionResponse>(ApiTemplateContext.USP_GetPermission,
+            var results = _unitOfWork.ExecuteStoreProcedure<PermissionResponse>(FintechContext.USP_GetPermission,
             new Hashtable { ["@UserId"] = currentUserId, ["@Code"] = code }).FirstOrDefault();
 
             if (results == null)

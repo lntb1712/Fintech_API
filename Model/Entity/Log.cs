@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Entity
 {
-    [Table("Template_Log")]
+    [Table("Fintech_Log")]
     public class Log
     {
         public int Id { get; set; }
