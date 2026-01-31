@@ -25,7 +25,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Cấu hình appsettings và appsettings.Development.json cho môi trường Development
 builder.Configuration.SetBasePath(Directory.GetCurrentDirectory())  // Đảm bảo tìm đúng thư mục
     .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-    .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: true);
+    .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: true)
+    .AddEnvironmentVariables();
 
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
