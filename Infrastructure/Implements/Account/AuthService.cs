@@ -342,14 +342,14 @@ namespace Infrastructure.Implements.Account
                        .FirstOrDefaultAsync();
             if (user == null) throw new AppException("Device is not found or not register!");
 #if !DEBUG
-            //Check otp
-            ModelOtp otpSaved;
-            if (!_memoryCache.TryGetValue(model.UserPhone, out otpSaved)) throw new AppException("Phone is wrong or OTP was expired, please re-enter the OTP");
-            otpSaved.NumCheck += 1;
-            if (otpSaved.NumCheck > 3) throw new AppException("OTP has been entered too many times, please re-enter the OTP");
-            if (otpSaved.Expire < DateTime.Now) throw new AppException("OTP was expired, please re-enter the OTP");
-            if (otpSaved.Code != model.OTP) throw new AppException("OTP is wrong!");
-            if (otpSaved.UDID != deviceInfo.UDID) throw new AppException("Device is wrong!");
+            ////Check otp
+            //ModelOtp otpSaved;
+            //if (!_memoryCache.TryGetValue(model.UserPhone, out otpSaved)) throw new AppException("Phone is wrong or OTP was expired, please re-enter the OTP");
+            //otpSaved.NumCheck += 1;
+            //if (otpSaved.NumCheck > 3) throw new AppException("OTP has been entered too many times, please re-enter the OTP");
+            //if (otpSaved.Expire < DateTime.Now) throw new AppException("OTP was expired, please re-enter the OTP");
+            //if (otpSaved.Code != model.OTP) throw new AppException("OTP is wrong!");
+            //if (otpSaved.UDID != deviceInfo.UDID) throw new AppException("Device is wrong!");
 
 #else
             if (_memoryCache.TryGetValue($"auth_{deviceInfo.UDID}_{model.OTP}", out _))
