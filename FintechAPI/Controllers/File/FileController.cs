@@ -3,7 +3,7 @@ using DomainService.Interfaces.File;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace API_Template.Controllers.File
+namespace Fintech_API.Controllers.File
 {
     [Route("api/[controller]")]
     [ApiController]

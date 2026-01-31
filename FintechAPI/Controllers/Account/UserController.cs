@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Model.RequestModel.Common;
 using Model.RequestModel.PermissionManagement;
 
-namespace API_Template.Controllers.Account
+namespace Fintech_API.Controllers.Account
 {
     [Route("api/[controller]")]
     [ApiController]

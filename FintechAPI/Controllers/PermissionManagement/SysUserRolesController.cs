@@ -2,7 +2,7 @@
 using DomainService.Interfaces.PermissionManagement;
 using Microsoft.AspNetCore.Mvc;
 
-namespace API_Template.Controllers.PermissionManagement
+namespace Fintech_API.Controllers.PermissionManagement
 {
     [Route("api/[controller]")]
     [ApiController]

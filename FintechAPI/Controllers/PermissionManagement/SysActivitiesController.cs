@@ -5,7 +5,7 @@ using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using Model.RequestModel.PermissionManagement;
 
-namespace API_Template.Controllers.PermissionManagement
+namespace Fintech_API.Controllers.PermissionManagement
 {
     [Route("api/[controller]")]
     [ApiController]

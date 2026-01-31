@@ -11,7 +11,7 @@ using Microsoft.Graph.Models.CallRecords;
 using Model.RequestModel;
 using Model.RequestModel.Common;
 
-namespace API_Template.Controllers.Device
+namespace Fintech_API.Controllers.Device
 {
     [Route("api/[controller]")]
     [ApiController]
