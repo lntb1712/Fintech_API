@@ -5,11 +5,13 @@ using DomainService.Interfaces.Device;
 using DomainService.Interfaces.Email;
 using DomainService.Interfaces.File;
 using DomainService.Interfaces.PermissionManagement;
+using DomainService.Interfaces.Wallet;
 using Infrastructure.Implements.Account;
 using Infrastructure.Implements.Device;
 using Infrastructure.Implements.Email;
 using Infrastructure.Implements.File;
 using Infrastructure.Implements.PermissionManagement;
+using Infrastructure.Implements.Wallet;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -42,6 +44,19 @@ public static class ServiceRegistration
         services.AddTransient<IUserService, UserService>();
         //services.AddTransient<IEmailService, EmailService>();
         services.AddTransient<IDeviceService, DeviceService>();
+
+        //Wallet 
+        services.AddTransient<IWalletService, WalletService>();
+        services.AddTransient<ICategoryService, CategoryService>();
+        services.AddTransient<ITransactionService, TransactionService>();
+        services.AddTransient<IBudgetService, BudgetService>();
+        services.AddTransient<IGoalService, GoalService>();
+        services.AddTransient<IRecurringTransactionService, RecurringTransactionService>();
+        services.AddTransient<ITagService, TagService>();
+        services.AddTransient<ISharedWalletService, SharedWalletService>();
+        services.AddTransient<ISharedWalletMemberService, SharedWalletMemberService>();
+        services.AddTransient<ITransactionTagService, TransactionTagService>();
+        services.AddTransient<ITransferService, TransferService>();
 
         return services;
     }

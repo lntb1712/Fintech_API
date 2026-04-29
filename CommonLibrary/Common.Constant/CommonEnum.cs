@@ -84,4 +84,26 @@
     {
         Admin = 1,
     }
+
+    public enum WalletType
+    {
+        Cash = 1,
+        Bank = 2,
+        EWallet = 3,
+        Other = 4
+    }
+
+    public enum CategoryType
+    {
+        Income = 1,
+        Expense = 2,
+        Transfer = 3
+    }
+
+    public enum TransactionSource
+    {
+        Manual = 1,
+        SMS = 2,
+        Import = 3
+    }
 }

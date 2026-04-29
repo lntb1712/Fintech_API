@@ -42,7 +42,7 @@ namespace Infrastructure.Implements.Account
         private ExchangeService exchangeService;
         private readonly StrJWT _strJwt = strJwt.Value;
         private readonly AppSettings _appSettings = appSettings.Value;
-        private const string DOMAIN_NAME = "@vietnamairlines.com";
+        private const string DOMAIN_NAME = "@gmail.com";
 
         private string ComputeHmac(string message, string secret)
         {
