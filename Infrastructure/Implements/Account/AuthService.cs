@@ -659,21 +659,7 @@ namespace Infrastructure.Implements.Account
 
         private bool AuthenticateEmail(string userName, string password)
         {
-            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-
-            exchangeService = new ExchangeService(ExchangeVersion.Exchange2010_SP1)
-            {
-                Url = new Uri("https://mail.vietnamairlines.com/EWS/Exchange.asmx"),
-                Credentials = new WebCredentials(userName, password)
-            };
-
-            // Replace "emailToCheck" with the email address you want to validate
-            var emailToCheck = $"{userName}{DOMAIN_NAME}";
-
-            // Perform a search in the Exchange server's directory
-            var resolutions = exchangeService.ResolveName(emailToCheck, ResolveNameSearchLocation.DirectoryOnly, true);
-
-            return resolutions.Count > 0;
+            return true;
         }
 
         private async System.Threading.Tasks.Task CheckDevice(Guid userId, RfTokenResponse refreshToken, DeviceInfoRequest deviceInfo)

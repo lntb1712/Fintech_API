@@ -33,7 +33,7 @@ namespace Common.Authorization.Utils
             _memoryCache = memoryCache;
         }
 
-        private const string DOMAIN_MAIL = "@vietnamairlines.com";
+        private const string DOMAIN_MAIL = "@gmail.com";
         private const string TENANT_KEY = "tid"; // tenant id
         private const string UNIQUE_NAME = "unique_name"; // email
         private const string PREFERRER_USERNAME = "preferred_username";
