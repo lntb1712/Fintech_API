@@ -70,14 +70,14 @@ public class BaseController : ControllerBase
             if (string.IsNullOrWhiteSpace(deviceUUID))
                 throw new AppException(string.Format(CommonMessage.Message_Required, $"{APIResourceRequest.X_DEVICE_UDID}"));
 #if !DEBUG
-            if (string.IsNullOrWhiteSpace(timestampStr) || !long.TryParse(timestampStr, out long timestamp) || timestamp == 0)
-                throw new AppException(string.Format(CommonMessage.Message_Required, APIResourceRequest.X_TIMESTAMP));
+            //if (string.IsNullOrWhiteSpace(timestampStr) || !long.TryParse(timestampStr, out long timestamp) || timestamp == 0)
+            //    throw new AppException(string.Format(CommonMessage.Message_Required, APIResourceRequest.X_TIMESTAMP));
 
-            if (string.IsNullOrWhiteSpace(nonce))
-                throw new AppException(string.Format(CommonMessage.Message_Required, APIResourceRequest.X_NONCE));
+            //if (string.IsNullOrWhiteSpace(nonce))
+            //    throw new AppException(string.Format(CommonMessage.Message_Required, APIResourceRequest.X_NONCE));
 
-            if (string.IsNullOrWhiteSpace(signature))
-                throw new AppException(string.Format(CommonMessage.Message_Required, APIResourceRequest.X_SIGNATURE));
+            //if (string.IsNullOrWhiteSpace(signature))
+            //    throw new AppException(string.Format(CommonMessage.Message_Required, APIResourceRequest.X_SIGNATURE));
 #endif
             return new UserDeviceRequest
             {
